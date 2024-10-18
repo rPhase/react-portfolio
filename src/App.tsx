@@ -1,10 +1,14 @@
-import Projects from './components/Projects';
+import ContentSection from './components/ContentSection';
+import IntroSection from './components/IntroSection';
 
 function App() {
   return (
-    <>
-      <Projects />
-    </>
+    <div className='min-h-screen min-w-screen relative bg-gray-800 text-gray-200'>
+      <div className=''>
+        <IntroSection />
+        <ContentSection />
+      </div>
+    </div>
   );
 }
 
