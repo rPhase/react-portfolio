@@ -6,9 +6,11 @@ import Projects from './Content/Projects';
 const ContentSection = () => {
   return (
     <div className=''>
-      <About />
-      <Experience />
-      <Projects />
+      <div>
+        <About />
+        <Experience />
+        <Projects />
+      </div>
     </div>
   );
 };

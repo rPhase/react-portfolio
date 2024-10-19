@@ -1,20 +1,18 @@
-// Intro Section
-
-import { about } from '@/data/about';
+import Intro from './Intro/Intro';
+import NavButton from './Intro/NavButton';
 
 const IntroSection = () => {
   return (
-    <div>
-      <div>
-        <h1>{about.name}</h1>
-        <h2>{about.title}</h2>
-        <p>{about.description}</p>
+    <div className='fixed flex flex-col h-full bg-sky-950 gap-32'>
+      <Intro />
+      {/* Navigation */}
+      <div className='text-[1.5rem] font-medium flex flex-col gap-2'>
+        <NavButton>About</NavButton>
+        <NavButton>Experience</NavButton>
+        <NavButton>Projects</NavButton>
       </div>
-      <div>
-        <p>About</p>
-        <p>Experience</p>
-        <p>Projects</p>
-      </div>
+
+      <div>Socials</div>
     </div>
   );
 };
