@@ -1,4 +1,4 @@
-import { IProject } from '@/data/projects-data';
+import { IProject } from "@/data/projects-data";
 
 interface Props {
   project: IProject;
@@ -11,35 +11,35 @@ const ProjectDetail = ({ project }: Props) => {
   const imgSrcPath = `${import.meta.env.BASE_URL}/images/projects/${imgSrc}`;
 
   return (
-    <div className='w-[55rem] p-[2rem] grid grid-cols-[auto_70%] gap-[3rem] text-gray-100'>
+    <div className="grid w-[55rem] grid-cols-[auto_70%] gap-[3rem] p-[2rem] text-gray-100">
       <div>
-        <img src={imgSrcPath} alt={title} className='' />
+        <img src={imgSrcPath} alt={title} className="" />
       </div>
       <div>
         <div>
-          <h1 className='text-xl text-[#ffffff] mb-2 capitalize'>
-            {title}{' '}
+          <h1 className="mb-2 text-xl capitalize text-[#ffffff]">
+            {title}{" "}
             {repo && (
-              <a className='text-[#4284ff]' href={repo}>
+              <a className="text-[#4284ff]" href={repo}>
                 Repo
               </a>
-            )}{' '}
+            )}{" "}
             {url && (
-              <a className='text-[#4284ff]' href={url}>
+              <a className="text-[#4284ff]" href={url}>
                 Demo
               </a>
             )}
           </h1>
-          <ul className='list-disc list-inside mb-3'>
+          <ul className="mb-3 list-inside list-disc">
             {description.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
-        <div className='flex flex-wrap gap-x-3 gap-y-3'>
+        <div className="flex flex-wrap gap-x-3 gap-y-3">
           {builtWith?.map((tag) => (
             <span
-              className='px-3 py-2 bg-[#0b0a46] text-[#6991ff] rounded-full'
+              className="rounded-full bg-[#0b0a46] px-3 py-2 text-[#6991ff]"
               key={tag}
             >
               {tag}
