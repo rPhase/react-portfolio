@@ -1,4 +1,4 @@
-import { experience } from '@/data/experience';
+import { experience } from '@/data/experience-data';
 import ExperienceDetail from './ExperienceDetail';
 const Experience = () => {
   return (

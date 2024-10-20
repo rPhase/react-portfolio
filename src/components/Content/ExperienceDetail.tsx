@@ -1,4 +1,4 @@
-import { IExperience } from '@/data/experience';
+import { IExperience } from '@/data/experience-data';
 
 interface Props {
   experience: IExperience;

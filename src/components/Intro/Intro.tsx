@@ -1,5 +1,5 @@
 import avatar from '@/assets/images/about/avatar-1.jpg';
-import { about } from '@/data/about';
+import { about } from '@/data/about-data';
 const Intro = () => {
   return (
     <div className='flex flex-col gap-12 mb-24'>

@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div id='about'>
-      <p>
+      <p className=''>
         Aut eum exercitationem. Molestias tempora vitae ipsam qui. Quam est
         maiores molestiae. Maxime perspiciatis earum accusamus. Quis ut animi. A
         vel fugit et voluptates id aspernatur. Ea et ducimus. Quo deleniti
