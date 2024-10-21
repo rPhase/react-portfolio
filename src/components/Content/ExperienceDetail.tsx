@@ -1,20 +1,31 @@
-import { IExperience } from '@/data/experience-data';
+import { IExperience } from "@/data/experience-data";
+import TagItem from "./TagItem";
 
 interface Props {
   experience: IExperience;
 }
 const ExperienceDetail = ({ experience }: Props) => {
   return (
-    <div>
-      <div>
-        <p>{experience.startDate}</p>
-        <p>{experience.endDate}</p>
+    <div className="mb-8 flex flex-col rounded-2xl bg-purple-800 p-8 lg:flex-row lg:gap-3">
+      <div className="mb-2 bg-red-600">
+        <p className="font-semibold italic text-sky-400">
+          {experience.startDate} - {experience.endDate}
+        </p>
       </div>
-      <div>
-        <h3>{experience.name}</h3>
-        <h3>{experience.title}</h3>
-        <p>{experience.description}</p>
-        <a href={experience.url}>link</a>
+      <div className="flex flex-col gap-3">
+        <div>
+          <h1 className="text-3xl font-bold">{experience.name}</h1>
+          <h2 className="text-2xl font-semibold">{experience.title}</h2>
+        </div>
+        <div>
+          <p>{experience.description}</p>
+          <ul className="list-inside list-disc pl-3 text-2xl">
+            {experience.bulletPoints?.map((item) => <li key={item}>{item}</li>)}
+          </ul>
+        </div>
+        <div className="flex flex-wrap gap-x-3 gap-y-3">
+          {experience.techStack?.map((tag) => <TagItem key={tag} tag={tag} />)}
+        </div>
       </div>
     </div>
   );

@@ -6,29 +6,36 @@ export interface IExperience {
   startDate: string;
   endDate?: string;
   description: string;
+  bulletPoints?: string[];
   techStack?: string[];
 }
 
 export const experience: IExperience[] = [
   {
-    name: 'illum ex dolor',
-    title: 'Developer',
-    url: 'www.example.com',
-    imgSrc: 'experience-1',
-    startDate: '2020',
-    endDate: '2024',
-    description: 'Id et facilis enim. Libero hic animi.',
-    techStack: ['JavaScript', 'TypeScript', 'NodeJS', 'ReactJS'],
+    name: "illum ex dolor",
+    title: "Developer",
+    url: "www.example.com",
+    imgSrc: "experience-1",
+    startDate: "2020",
+    endDate: "2024",
+    description:
+      "Id et facilis enim. Libero hic animi. Repudiandae commodi ut soluta. Et quam quidem ipsum libero maxime vel. Ut quam quasi qui. Natus natus quis recusandae.",
+    bulletPoints: [
+      "Ut vero et iure.",
+      "Sit alias voluptatum reprehenderit nulla non.",
+      "Quidem eos et.",
+    ],
+    techStack: ["JavaScript", "TypeScript", "NodeJS", "ReactJS"],
   },
   {
-    name: 'nisi ea autem',
-    title: 'Developer',
-    url: 'www.example.com',
-    imgSrc: 'experience-1',
-    startDate: '2018',
-    endDate: '2020',
+    name: "nisi ea autem",
+    title: "Developer",
+    url: "www.example.com",
+    imgSrc: "experience-1",
+    startDate: "2018",
+    endDate: "2020",
     description:
-      'Sed magnam nisi libero cupiditate ab vel possimus. Quia eaque velit rerum dolorum. Hic doloribus sed. ',
-    techStack: ['Python', 'C++', 'Java'],
+      "Sed magnam nisi libero cupiditate ab vel possimus. Quia eaque velit rerum dolorum. Hic doloribus sed. ",
+    techStack: ["Python", "C++", "Java"],
   },
 ];
