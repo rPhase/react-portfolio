@@ -12,7 +12,7 @@ const ProjectDetail = ({ project }: Props) => {
   const imgSrcPath = `${import.meta.env.BASE_URL}/images/projects/${imgSrc}`;
 
   return (
-    <div className="mb-8 flex flex-col gap-[3rem] rounded-2xl bg-lime-900 p-8 text-gray-100 lg:grid lg:w-[60rem] lg:grid-cols-[auto_65%] lg:items-start">
+    <div className="mb-8 flex flex-col gap-[3rem] rounded-2xl bg-lime-900 p-8 text-gray-100 lg:grid lg:grid-cols-[auto_65%] lg:items-start">
       <div className="order-2 lg:order-none">
         <img src={imgSrcPath} alt={title} className="w-[30rem] rounded-lg" />
       </div>

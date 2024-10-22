@@ -16,8 +16,7 @@ export const experience: IExperience[] = [
     title: "Developer",
     url: "www.example.com",
     imgSrc: "experience-1",
-    startDate: "2020",
-    endDate: "2024",
+    startDate: "June 2020",
     description:
       "Id et facilis enim. Libero hic animi. Repudiandae commodi ut soluta. Et quam quidem ipsum libero maxime vel. Ut quam quasi qui. Natus natus quis recusandae.",
     bulletPoints: [
@@ -33,7 +32,7 @@ export const experience: IExperience[] = [
     url: "www.example.com",
     imgSrc: "experience-1",
     startDate: "2018",
-    endDate: "2020",
+    endDate: "April 2020",
     description:
       "Sed magnam nisi libero cupiditate ab vel possimus. Quia eaque velit rerum dolorum. Hic doloribus sed. ",
     techStack: ["Python", "C++", "Java"],
