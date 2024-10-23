@@ -7,14 +7,14 @@ import Projects from './Content/Projects';
 
 const ContentSection = () => {
   return (
-    <div className="bg-black px-8 lg:ml-96">
+    <main className="bg-black px-8 pt-20 lg:ml-[35rem]">
       <div>
         <About />
         <Experience />
         <Projects />
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 export default ContentSection;
