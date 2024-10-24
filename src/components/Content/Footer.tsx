@@ -1,4 +1,4 @@
-import { about } from "@/data/about-data";
+import { aboutData } from '@/data/about-data';
 const Footer = () => {
   return (
     <footer className="space-y-2 pb-8 text-2xl lg:flex lg:justify-between">
@@ -6,7 +6,7 @@ const Footer = () => {
         <li>©</li>
         <li>{`${new Date().getFullYear()}`}</li>
         <li>-</li>
-        <li>{about.name}</li>
+        <li>{aboutData.name}</li>
       </ul>
       <ul className="flex justify-center">
         <li>Powered by React, TypeScript, and Tailwind CSS.</li>

@@ -1,3 +1,4 @@
+import Skills from './Skills';
 const About = () => {
   return (
     <div id="about">
@@ -16,7 +17,7 @@ const About = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam,
           voluptatum!
         </p>
-        <div>{/* Tech Stack */}</div>
+        <Skills />
       </div>
     </div>
   );

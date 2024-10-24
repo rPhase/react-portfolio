@@ -1,7 +1,7 @@
-import { about } from '@/data/about-data';
+import { aboutData } from '@/data/about-data';
 const Intro = () => {
   // Construct path to public asset with base path in mind
-  const imgSrcPath = `${import.meta.env.BASE_URL}/images/about/${about.avatarSrc}`;
+  const imgSrcPath = `${import.meta.env.BASE_URL}/images/about/${aboutData.avatarSrc}`;
   return (
     <div className="mb-20 mt-20 flex flex-col gap-12">
       <div className="flex items-center">
@@ -11,11 +11,13 @@ const Intro = () => {
           className="mr-4 h-[10rem] rounded-full"
         />
         <div className="text-gray-50">
-          <h1 className="text-5xl font-bold">{about.name}</h1>
-          <h2 className="text-[2rem] capitalize">{about.title}</h2>
+          <h1 className="text-5xl font-bold">{aboutData.name}</h1>
+          <h2 className="text-[2rem] capitalize">{aboutData.title}</h2>
         </div>
       </div>
-      <p className="w-4/5 text-[1.5rem] text-gray-100">{about.description}</p>
+      <p className="w-4/5 text-[1.5rem] text-gray-100">
+        {aboutData.description}
+      </p>
     </div>
   );
 };
