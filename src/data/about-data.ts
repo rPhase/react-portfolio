@@ -1,6 +1,13 @@
 import { IconType } from 'react-icons';
-import { FaReact } from 'react-icons/fa';
+import {
+  FaFacebookSquare,
+  FaGithub,
+  FaLinkedin,
+  FaReact,
+} from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
 import { IoLogoJavascript } from 'react-icons/io5';
+import { MdOutlineEmail } from 'react-icons/md';
 import { SiTypescript } from 'react-icons/si';
 
 export interface ISkill {
@@ -17,6 +24,12 @@ interface IAbout {
   title: string;
   avatarSrc: string;
   description: string;
+}
+
+interface ISocials {
+  name: string;
+  icon: IconType;
+  URL: string;
 }
 
 export const aboutData: IAbout = {
@@ -60,4 +73,16 @@ export const skillsData: ISkill[] = [
     iconColor: '#58c4dc',
     URL: 'https://reactnative.dev/',
   },
+];
+
+export const socialsData: ISocials[] = [
+  {
+    name: 'E-mail',
+    icon: MdOutlineEmail,
+    URL: 'mailto:test@test.com',
+  },
+  { name: 'GitHub', icon: FaGithub, URL: 'https://github.com/rPhase' },
+  { name: 'LinkedIn', icon: FaLinkedin, URL: 'https://linkedin.com' },
+  { name: 'X', icon: FaSquareXTwitter, URL: 'https://x.com' },
+  { name: 'Facebook', icon: FaFacebookSquare, URL: 'https://facebook.com' },
 ];

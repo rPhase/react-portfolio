@@ -10,8 +10,6 @@ const NavBar = () => {
           <NavButton>Experience</NavButton>
           <NavButton>Projects</NavButton>
         </div>
-
-        <div>Socials</div>
       </div>
     </div>
   );
