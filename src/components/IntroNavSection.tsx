@@ -4,16 +4,19 @@ import Socials from './IntroNav/Socials';
 
 const IntroNavSection = () => {
   return (
-    <div className="hidden h-full w-[35rem] flex-col gap-32 bg-sky-950 lg:fixed lg:flex">
-      <Intro />
+    <div className="fixed h-20 w-full bg-sky-950 lg:flex lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
+      <div className="hidden lg:block">
+        <Intro />
+      </div>
+
       {/* Navigation */}
-      <div className="flex flex-1 flex-col gap-2 text-[2rem] font-medium">
+      <div className="mr-8 flex justify-end gap-4 pt-2 text-[2rem] font-medium lg:mr-0 lg:flex-1 lg:flex-col lg:justify-start lg:gap-2">
         <NavButton>About</NavButton>
         <NavButton>Experience</NavButton>
         <NavButton>Projects</NavButton>
       </div>
 
-      <div>
+      <div className="hidden lg:block">
         <Socials />
       </div>
     </div>
