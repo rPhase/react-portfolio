@@ -1,7 +1,7 @@
 import Skills from './Skills';
 const About = () => {
   return (
-    <div id="about">
+    <div id="">
       <h1 className="py-8 text-4xl uppercase tracking-wider">About</h1>
       <div className="rounded-2xl bg-pink-900 p-8 text-2xl">
         <div className="mb-8">
