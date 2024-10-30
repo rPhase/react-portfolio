@@ -1,19 +1,53 @@
 import { ISection } from '@/types';
+import { useEffect, useState } from 'react';
 import Intro from './IntroNav/Intro';
 import NavButton from './IntroNav/NavButton';
 import Socials from './IntroNav/Socials';
 
 interface Props {
   sections: ISection[];
-  onSectionClick: (ref: React.RefObject<HTMLElement>) => void;
-  activeSection: string;
 }
 
-const IntroNavSection = ({
-  sections,
-  onSectionClick,
-  activeSection,
-}: Props) => {
+const threshold = 100;
+
+const IntroNavSection = ({ sections }: Props) => {
+  const [activeSection, setActiveSection] = useState('about');
+
+  // Check for the scroll position to activate a tab
+  // Also check if bottom
+  const checkScrollPosition = () => {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY;
+    const lastSection = sections.length - 1;
+
+    // Calculate distance from bottom
+    const distanceBottom = documentHeight - (scrollTop + windowHeight);
+
+    sections.forEach(({ ref, id }, index) => {
+      const sectionTop = ref.current!.offsetTop;
+
+      if (scrollTop >= sectionTop - 100 && scrollTop <= sectionTop + 100) {
+        setActiveSection(id);
+      }
+
+      if (index === lastSection && distanceBottom <= threshold) {
+        setActiveSection(id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollPosition);
+
+    return () => window.removeEventListener('scroll', checkScrollPosition);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="fixed h-20 w-full bg-sky-950 lg:flex lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
       <div className="hidden lg:block">
@@ -25,7 +59,7 @@ const IntroNavSection = ({
         {sections.map((section) => (
           <NavButton
             key={section.id}
-            onClick={() => onSectionClick(section.ref)}
+            onClick={() => scrollToSection(section.ref)}
             active={section.id === activeSection}
           >
             {section.label}
