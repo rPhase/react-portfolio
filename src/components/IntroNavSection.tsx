@@ -6,9 +6,14 @@ import Socials from './IntroNav/Socials';
 interface Props {
   sections: ISection[];
   onSectionClick: (ref: React.RefObject<HTMLElement>) => void;
+  activeSection: string;
 }
 
-const IntroNavSection = ({ sections, onSectionClick }: Props) => {
+const IntroNavSection = ({
+  sections,
+  onSectionClick,
+  activeSection,
+}: Props) => {
   return (
     <div className="fixed h-20 w-full bg-sky-950 lg:flex lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
       <div className="hidden lg:block">
@@ -18,7 +23,11 @@ const IntroNavSection = ({ sections, onSectionClick }: Props) => {
       {/* Navigation */}
       <div className="mr-8 flex justify-end gap-4 pt-2 text-[2rem] font-medium lg:mr-0 lg:flex-1 lg:flex-col lg:justify-start lg:gap-2">
         {sections.map((section) => (
-          <NavButton onClick={() => onSectionClick(section.ref)}>
+          <NavButton
+            key={section.id}
+            onClick={() => onSectionClick(section.ref)}
+            active={section.id === activeSection}
+          >
             {section.label}
           </NavButton>
         ))}
