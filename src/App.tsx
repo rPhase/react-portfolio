@@ -1,4 +1,7 @@
 import { useRef } from 'react';
+import About from './components/Content/About';
+import Experience from './components/Content/Experience';
+import Projects from './components/Content/Projects';
 import ContentSection from './components/ContentSection';
 import IntroNavSection from './components/IntroNavSection';
 import ToggleButton from './components/UI/ToggleButton';
@@ -10,9 +13,19 @@ function App() {
   const projectsRef = useRef<HTMLElement>(null);
 
   const sections: ISection[] = [
-    { id: 'about', label: 'About', ref: aboutRef },
-    { id: 'experience', label: 'Experience', ref: experienceRef },
-    { id: 'projects', label: 'Projects', ref: projectsRef },
+    { id: 'about', label: 'About', ref: aboutRef, component: About },
+    {
+      id: 'experience',
+      label: 'Experience',
+      ref: experienceRef,
+      component: Experience,
+    },
+    {
+      id: 'projects',
+      label: 'Projects',
+      ref: projectsRef,
+      component: Projects,
+    },
   ];
 
   return (
