@@ -16,7 +16,7 @@ const ContentSection = ({ sections }: Props) => {
         <Socials />
       </div>
       {sections.map((section) => (
-        <ScrollWrapper id={section.id} ref={section.ref}>
+        <ScrollWrapper key={section.id} id={section.id} ref={section.ref}>
           <section.component />
         </ScrollWrapper>
       ))}

@@ -15,20 +15,28 @@ const ProjectDetail = ({ project }: Props) => {
 
   return (
     <div className="mb-8 flex flex-col gap-[3rem] rounded-2xl bg-lime-900 p-8 text-gray-100 lg:grid lg:grid-cols-[auto_65%] lg:items-start">
-      <div className="order-2 lg:order-none">
-        <img src={imgSrcPath} alt={title} className="w-[30rem] rounded-lg" />
-        <div className="flex max-w-[30rem] justify-center gap-x-8 bg-gray-800 pb-2 text-2xl">
-          {repo && (
-            <a className="flex items-center gap-x-2 text-[#4284ff]" href={repo}>
-              Repo <CgGitFork />
-            </a>
-          )}
-          {url && (
-            <a className="flex items-center gap-x-2 text-[#4284ff]" href={url}>
-              Demo <FaExternalLinkAlt />
-            </a>
-          )}
-        </div>
+      <div className="order-2 mx-auto max-w-[40rem] lg:order-none">
+        <img src={imgSrcPath} alt={title} className="rounded-lg" />
+        {(repo || url) && (
+          <div className="flex justify-center gap-x-20 bg-gray-800 pb-2 text-2xl lg:gap-x-10">
+            {repo && (
+              <a
+                className="flex items-center gap-x-2 text-[#4284ff]"
+                href={repo}
+              >
+                Repo <CgGitFork />
+              </a>
+            )}
+            {url && (
+              <a
+                className="flex items-center gap-x-2 text-[#4284ff]"
+                href={url}
+              >
+                Demo <FaExternalLinkAlt />
+              </a>
+            )}
+          </div>
+        )}
       </div>
       <div className="order-1 lg:order-none">
         <div>

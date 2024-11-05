@@ -49,13 +49,13 @@ const IntroNavSection = ({ sections }: Props) => {
   };
 
   return (
-    <div className="fixed h-20 w-full bg-sky-950 lg:flex lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
+    <div className="fixed flex h-20 w-full bg-sky-950 lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
       <div className="hidden lg:block">
         <Intro />
       </div>
 
       {/* Navigation */}
-      <div className="mr-8 flex justify-end gap-4 pt-2 text-[2rem] font-medium lg:mr-0 lg:flex-1 lg:flex-col lg:justify-start lg:gap-2">
+      <div className="ml-auto mr-8 flex items-center gap-4 text-[2rem] font-medium lg:mx-0 lg:flex-1 lg:flex-col lg:items-start lg:justify-start lg:gap-2">
         {sections.map((section) => (
           <NavButton
             key={section.id}
