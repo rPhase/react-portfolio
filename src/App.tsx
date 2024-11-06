@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import About from './components/Content/About';
 import Experience from './components/Content/Experience';
 import Projects from './components/Content/Projects';
@@ -8,6 +8,8 @@ import ToggleButton from './components/UI/ToggleButton';
 import { ISection } from './types';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
@@ -29,8 +31,10 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-800 text-gray-200">
-      <ToggleButton />
+    <div
+      className={`min-h-screen bg-white text-gray-200 transition-all duration-300 dark:bg-gray-800 ${isDarkMode ? 'dark' : ''}`}
+    >
+      <ToggleButton isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="relative flex min-h-screen max-w-[110rem] flex-col lg:mx-auto">
         <IntroNavSection sections={sections} />
         <ContentSection sections={sections} />
