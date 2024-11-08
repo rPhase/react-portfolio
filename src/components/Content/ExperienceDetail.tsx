@@ -1,5 +1,5 @@
-import { IExperience } from "@/data/experience-data";
-import TagItem from "./TagItem";
+import { IExperience } from '@/data/experience-data';
+import TagItem from './TagItem';
 
 interface Props {
   experience: IExperience;
@@ -25,6 +25,7 @@ const ExperienceDetail = ({ experience }: Props) => {
             {experience.bulletPoints?.map((item) => <li key={item}>{item}</li>)}
           </ul>
         </div>
+        <hr className="mx-auto my-4 w-3/4 border-gray-400" />
         <div className="flex flex-wrap gap-x-3 gap-y-3">
           {experience.techStack?.map((tag) => <TagItem key={tag} tag={tag} />)}
         </div>

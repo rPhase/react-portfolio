@@ -13,7 +13,7 @@ const ToggleButton = ({ isDarkMode, setIsDarkMode }: Props) => {
     >
       <div className="relative size-6">
         <LuSun
-          className={`absolute transform transition-all duration-300 ease-in-out ${isDarkMode ? 'rotate-90 scale-50 opacity-0' : 'rotate-0 scale-100 opacity-100'}`}
+          className={`absolute transform transition-all duration-300 ease-in-out lg:text-black ${isDarkMode ? 'rotate-90 scale-50 opacity-0' : 'rotate-0 scale-100 opacity-100'}`}
           size={24}
         />
         <LuMoon

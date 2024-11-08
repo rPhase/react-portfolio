@@ -14,7 +14,7 @@ const ProjectDetail = ({ project }: Props) => {
   const imgSrcPath = `${import.meta.env.BASE_URL}/images/projects/${imgSrc}`;
 
   return (
-    <div className="mb-8 flex flex-col gap-[3rem] rounded-2xl bg-lime-900 p-8 text-gray-100 lg:grid lg:grid-cols-[auto_65%] lg:items-start">
+    <div className="mb-8 flex flex-col gap-y-4 rounded-2xl bg-lime-900 p-8 text-gray-100 lg:grid lg:grid-cols-[auto_65%] lg:items-start lg:gap-[3rem]">
       <div className="order-2 mx-auto max-w-[40rem] lg:order-none">
         <img src={imgSrcPath} alt={title} className="rounded-lg" />
         {(repo || url) && (
@@ -48,6 +48,7 @@ const ProjectDetail = ({ project }: Props) => {
             ))}
           </ul>
         </div>
+        <hr className="mx-auto my-4 w-3/4 border-gray-400" />
         <div className="flex flex-wrap gap-x-3 gap-y-3">
           {builtWith?.map((tag) => <TagItem key={tag} tag={tag} />)}
         </div>
