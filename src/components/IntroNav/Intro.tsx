@@ -10,14 +10,12 @@ const Intro = () => {
           alt="avatar"
           className="mr-4 h-[10rem] rounded-full"
         />
-        <div className="text-gray-50">
+        <div className="">
           <h1 className="text-5xl font-bold">{aboutData.name}</h1>
           <h2 className="text-[2rem] capitalize">{aboutData.title}</h2>
         </div>
       </div>
-      <p className="w-4/5 text-[1.5rem] text-gray-100">
-        {aboutData.description}
-      </p>
+      <p className="w-4/5 text-[1.5rem]">{aboutData.description}</p>
     </div>
   );
 };

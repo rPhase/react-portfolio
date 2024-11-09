@@ -6,9 +6,9 @@ interface Props {
 }
 const ExperienceDetail = ({ experience }: Props) => {
   return (
-    <div className="mb-8 flex flex-col rounded-2xl bg-purple-800 p-8 lg:flex-row lg:gap-3">
-      <div className="mb-2 bg-red-600">
-        <ul className="flex space-x-1 font-semibold italic text-sky-400 lg:w-40 lg:flex-col-reverse">
+    <div className="mb-8 flex flex-col rounded-2xl p-8 lg:flex-row lg:gap-3">
+      <div className="mb-2">
+        <ul className="flex space-x-1 font-semibold italic lg:w-40 lg:flex-col-reverse">
           <li>{experience.startDate}</li>
           <li>{` ~ `}</li>
           <li>{experience.endDate}</li>

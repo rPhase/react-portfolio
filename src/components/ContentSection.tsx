@@ -10,7 +10,7 @@ interface Props {
 
 const ContentSection = ({ sections }: Props) => {
   return (
-    <main className="bg-slate-400 px-8 pt-20 lg:ml-[35rem] dark:bg-black">
+    <main className="px-8 pt-20 lg:ml-[35rem]">
       <div className="lg:hidden">
         <Intro />
         <Socials />

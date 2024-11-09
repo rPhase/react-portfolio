@@ -14,14 +14,14 @@ const ProjectDetail = ({ project }: Props) => {
   const imgSrcPath = `${import.meta.env.BASE_URL}/images/projects/${imgSrc}`;
 
   return (
-    <div className="mb-8 flex flex-col gap-y-4 rounded-2xl bg-lime-900 p-8 text-gray-100 lg:grid lg:grid-cols-[auto_65%] lg:items-start lg:gap-[3rem]">
+    <div className="mb-8 flex flex-col gap-y-4 rounded-2xl p-8 lg:grid lg:grid-cols-[auto_65%] lg:items-start lg:gap-[3rem]">
       <div className="order-2 mx-auto max-w-[40rem] lg:order-none">
         <img src={imgSrcPath} alt={title} className="rounded-lg" />
         {(repo || url) && (
-          <div className="flex justify-center gap-x-20 bg-gray-800 pb-2 text-2xl lg:gap-x-10">
+          <div className="dark:bg-secondaryDark bg-secondary flex justify-center gap-x-20 pb-2 text-2xl lg:gap-x-10">
             {repo && (
               <a
-                className="flex items-center gap-x-2 text-[#4284ff]"
+                className="text-tBaseDark flex items-center gap-x-2"
                 href={repo}
               >
                 Repo <CgGitFork />
@@ -29,7 +29,7 @@ const ProjectDetail = ({ project }: Props) => {
             )}
             {url && (
               <a
-                className="flex items-center gap-x-2 text-[#4284ff]"
+                className="text-tBaseDark flex items-center gap-x-2"
                 href={url}
               >
                 Demo <FaExternalLinkAlt />
@@ -40,7 +40,7 @@ const ProjectDetail = ({ project }: Props) => {
       </div>
       <div className="order-1 lg:order-none">
         <div>
-          <h1 className="mb-2 text-3xl capitalize text-[#ffffff]">{title}</h1>
+          <h1 className="mb-2 text-3xl capitalize">{title}</h1>
 
           <ul className="mb-3 list-inside list-disc text-2xl">
             {description.map((item) => (

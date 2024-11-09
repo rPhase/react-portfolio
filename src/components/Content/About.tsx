@@ -3,7 +3,7 @@ const About = () => {
   return (
     <div id="">
       <h1 className="py-8 text-4xl uppercase tracking-wider">About</h1>
-      <div className="rounded-2xl bg-pink-900 p-8 text-2xl">
+      <div className="rounded-2xl p-8 text-2xl">
         <div className="mb-8">
           <p className="mb-8">
             Aut eum exercitationem. Molestias tempora vitae ipsam qui. Quam est

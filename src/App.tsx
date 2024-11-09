@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen bg-white text-gray-200 transition-all duration-300 dark:bg-gray-800 ${isDarkMode ? 'dark' : ''}`}
+      className={`cursor-select dark:bg-bgPrimaryDark bg-bgPrimary text-tBase dark:text-tBaseDark min-h-screen ${isDarkMode ? 'dark' : ''} theme-amethyst`}
     >
       <ToggleButton isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="relative flex min-h-screen max-w-[110rem] flex-col lg:mx-auto">

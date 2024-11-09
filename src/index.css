@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,4 +8,61 @@
 
 html {
   font-size: 10px;
+}
+
+a {
+  color: var(--color-secondary);
+}
+
+@layer base {
+  :root {
+    --color-primary: hsl(0, 0%, 0%);
+    --color-primary-dark: hsl(0, 0%, 100%);
+    --color-secondary: hsl(0, 0%, 50%);
+    --color-secondary-dark: hsl(0, 0%, 50%);
+    --color-text-base: hsl(0, 0%, 100%);
+    --color-text-base-dark: hsl(0, 0%, 0%);
+    --color-bg-primary: hsl(0, 0%, 100%);
+    --color-bg-primary-dark: hsl(0, 0%, 0%);
+  }
+
+  * {
+    @apply transition-colors duration-500 ease-in-out;
+  }
+}
+
+/* Ocean Theme */
+.theme-ocean {
+  --color-primary: hsl(210, 100%, 50%);
+  --color-primary-dark: hsl(210, 100%, 40%);
+  --color-secondary: hsl(200, 70%, 60%);
+  --color-secondary-dark: hsl(200, 70%, 30%);
+  --color-text-base: hsl(210, 25%, 20%);
+  --color-text-base-dark: hsl(210, 15%, 90%);
+  --color-bg-primary: hsl(205, 50%, 90%);
+  --color-bg-primary-dark: hsl(210, 30%, 12%);
+}
+
+/* Ruby Theme */
+.theme-ruby {
+  --color-primary: hsl(350, 85%, 50%);
+  --color-primary-dark: hsl(350, 80%, 40%);
+  --color-secondary: hsl(340, 60%, 60%);
+  --color-secondary-dark: hsl(340, 60%, 30%);
+  --color-text-base: hsl(350, 25%, 20%);
+  --color-text-base-dark: hsl(350, 15%, 90%);
+  --color-bg-primary: hsl(345, 50%, 90%);
+  --color-bg-primary-dark: hsl(350, 30%, 12%);
+}
+
+/* Amethyst Theme */
+.theme-amethyst {
+  --color-primary: hsl(270, 75%, 50%);
+  --color-primary-dark: hsl(270, 70%, 40%);
+  --color-secondary: hsl(280, 60%, 60%);
+  --color-secondary-dark: hsl(280, 60%, 30%);
+  --color-text-base: hsl(275, 25%, 20%);
+  --color-text-base-dark: hsl(270, 15%, 90%);
+  --color-bg-primary: hsl(275, 50%, 90%);
+  --color-bg-primary-dark: hsl(270, 30%, 12%);
 }
