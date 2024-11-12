@@ -10,59 +10,61 @@ html {
   font-size: 10px;
 }
 
-a {
-  color: var(--color-secondary);
-}
-
 @layer base {
-  :root {
-    --color-primary: hsl(0, 0%, 0%);
-    --color-primary-dark: hsl(0, 0%, 100%);
-    --color-secondary: hsl(0, 0%, 50%);
-    --color-secondary-dark: hsl(0, 0%, 50%);
-    --color-text-base: hsl(0, 0%, 100%);
-    --color-text-base-dark: hsl(0, 0%, 0%);
-    --color-bg-primary: hsl(0, 0%, 100%);
-    --color-bg-primary-dark: hsl(0, 0%, 0%);
+  [data-theme='purple'] {
+    --color-background: hsl(294, 100%, 93%);
+    --color-primary: hsl(270, 87%, 59%);
+    --color-secondary: hsl(292, 100%, 95%);
+    --color-text-base: hsl(275, 29%, 22%);
+  }
+
+  [data-theme='purple'][data-mode='dark'] {
+    --color-background: hsl(294, 100%, 20%);
+    --color-primary: hsl(270, 87%, 59%);
+    --color-secondary: hsl(292, 100%, 95%);
+    --color-text-base: hsl(275, 29%, 80%);
+  }
+
+  [data-theme='blue'] {
+    --color-background: hsl(214, 100%, 93%);
+    --color-primary: hsl(210, 87%, 59%);
+    --color-secondary: hsl(212, 100%, 95%);
+    --color-text-base: hsl(215, 29%, 22%);
+  }
+  [data-theme='blue'][data-mode='dark'] {
+    --color-background: hsl(214, 100%, 20%);
+    --color-primary: hsl(210, 87%, 59%);
+    --color-secondary: hsl(212, 100%, 95%);
+    --color-text-base: hsl(215, 29%, 80%);
+  }
+
+  [data-theme='red'] {
+    --color-background: hsl(354, 100%, 93%);
+    --color-primary: hsl(350, 87%, 59%);
+    --color-secondary: hsl(352, 100%, 95%);
+    --color-text-base: hsl(355, 29%, 22%);
+  }
+  [data-theme='red'][data-mode='dark'] {
+    --color-background: hsl(354, 100%, 20%);
+    --color-primary: hsl(350, 87%, 59%);
+    --color-secondary: hsl(352, 100%, 95%);
+    --color-text-base: hsl(355, 29%, 80%);
+  }
+
+  [data-theme='green'] {
+    --color-background: hsl(154, 100%, 90%);
+    --color-primary: hsl(150, 100%, 25%);
+    --color-secondary: hsl(152, 100%, 95%);
+    --color-text-base: hsl(155, 29%, 22%);
+  }
+  [data-theme='green'][data-mode='dark'] {
+    --color-background: hsl(154, 100%, 20%);
+    --color-primary: hsl(150, 100%, 25%);
+    --color-secondary: hsl(152, 100%, 95%);
+    --color-text-base: hsl(155, 29%, 80%);
   }
 
   * {
     @apply transition-colors duration-500 ease-in-out;
   }
-}
-
-/* Ocean Theme */
-.theme-ocean {
-  --color-primary: hsl(210, 100%, 50%);
-  --color-primary-dark: hsl(210, 100%, 40%);
-  --color-secondary: hsl(200, 70%, 60%);
-  --color-secondary-dark: hsl(200, 70%, 30%);
-  --color-text-base: hsl(210, 25%, 20%);
-  --color-text-base-dark: hsl(210, 15%, 90%);
-  --color-bg-primary: hsl(205, 50%, 90%);
-  --color-bg-primary-dark: hsl(210, 30%, 12%);
-}
-
-/* Ruby Theme */
-.theme-ruby {
-  --color-primary: hsl(350, 85%, 50%);
-  --color-primary-dark: hsl(350, 80%, 40%);
-  --color-secondary: hsl(340, 60%, 60%);
-  --color-secondary-dark: hsl(340, 60%, 30%);
-  --color-text-base: hsl(350, 25%, 20%);
-  --color-text-base-dark: hsl(350, 15%, 90%);
-  --color-bg-primary: hsl(345, 50%, 90%);
-  --color-bg-primary-dark: hsl(350, 30%, 12%);
-}
-
-/* Amethyst Theme */
-.theme-amethyst {
-  --color-primary: hsl(270, 75%, 50%);
-  --color-primary-dark: hsl(270, 70%, 40%);
-  --color-secondary: hsl(280, 60%, 60%);
-  --color-secondary-dark: hsl(280, 60%, 30%);
-  --color-text-base: hsl(275, 25%, 20%);
-  --color-text-base-dark: hsl(270, 15%, 90%);
-  --color-bg-primary: hsl(275, 50%, 90%);
-  --color-bg-primary-dark: hsl(270, 30%, 12%);
 }

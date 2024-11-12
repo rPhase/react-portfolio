@@ -3,7 +3,7 @@ interface Props {
 }
 const TagItem = ({ tag }: Props) => {
   return (
-    <span className="bg-primary dark:bg-primaryDark text-tBaseDark rounded-full px-3 py-2 text-xl font-semibold">
+    <span className="rounded-full bg-primary px-3 py-2 text-xl font-semibold text-secondary">
       {tag}
     </span>
   );

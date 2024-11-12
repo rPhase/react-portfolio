@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+// Utility
+const mix = (name) =>
+  `color-mix(in srgb, var(${name}) calc(100% * <alpha-value>), transparent)`;
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'selector',
@@ -15,14 +20,10 @@ export default {
           "url('/src/assets/cursors/icons8-select-cursor-48.png'), default",
       },
       colors: {
-        primary: 'var(--color-primary)',
-        primaryDark: 'var(--color-primary-dark)',
-        secondary: 'var(--color-secondary)',
-        secondaryDark: 'var(--color-secondary-dark)',
-        bgPrimary: 'var(--color-bg-primary)',
-        bgPrimaryDark: 'var(--color-bg-primary-dark)',
-        tBase: 'var(--color-text-base)',
-        tBaseDark: 'var(--color-text-base-dark)',
+        background: mix('--color-background'),
+        primary: mix('--color-primary'),
+        secondary: mix('--color-secondary'),
+        tBase: mix('--color-text-base'),
       },
     },
   },

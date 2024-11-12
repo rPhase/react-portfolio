@@ -49,7 +49,7 @@ const IntroNavSection = ({ sections }: Props) => {
   };
 
   return (
-    <div className="bg-bgPrimary dark:bg-bgPrimaryDark fixed flex h-20 w-full lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
+    <div className="bg-background fixed flex h-20 w-full lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
       <div className="hidden lg:block">
         <Intro />
       </div>

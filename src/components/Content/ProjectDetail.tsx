@@ -18,20 +18,14 @@ const ProjectDetail = ({ project }: Props) => {
       <div className="order-2 mx-auto max-w-[40rem] lg:order-none">
         <img src={imgSrcPath} alt={title} className="rounded-lg" />
         {(repo || url) && (
-          <div className="dark:bg-secondaryDark bg-secondary flex justify-center gap-x-20 pb-2 text-2xl lg:gap-x-10">
+          <div className="flex justify-center gap-x-20 bg-primary pb-2 text-2xl text-secondary lg:gap-x-10">
             {repo && (
-              <a
-                className="text-tBaseDark flex items-center gap-x-2"
-                href={repo}
-              >
+              <a className="flex items-center gap-x-2" href={repo}>
                 Repo <CgGitFork />
               </a>
             )}
             {url && (
-              <a
-                className="text-tBaseDark flex items-center gap-x-2"
-                href={url}
-              >
+              <a className="flex items-center gap-x-2" href={url}>
                 Demo <FaExternalLinkAlt />
               </a>
             )}
