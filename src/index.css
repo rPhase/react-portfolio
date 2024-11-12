@@ -64,7 +64,11 @@ html {
     --color-text-base: hsl(155, 29%, 80%);
   }
 
-  * {
+  .smooth-color {
     @apply transition-colors duration-500 ease-in-out;
+  }
+
+  .smooth-color-bg {
+    @apply transition-[background-color] duration-500 ease-in-out;
   }
 }

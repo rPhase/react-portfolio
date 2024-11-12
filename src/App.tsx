@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div
-      className={`bg-background min-h-screen cursor-select text-tBase`}
+      className={`smooth-color min-h-screen cursor-select bg-background text-tBase`}
       data-mode={`${isDarkMode ? 'dark' : ''}`}
       data-theme={`red`}
     >
