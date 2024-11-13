@@ -1,4 +1,5 @@
 import { IExperience } from '@/data/experience-data';
+import HoverCard from './HoverCard';
 import TagItem from './TagItem';
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
 }
 const ExperienceDetail = ({ experience }: Props) => {
   return (
-    <div className="mb-8 flex flex-col rounded-2xl p-8 lg:flex-row lg:gap-3">
+    <HoverCard className="mb-8 flex flex-col p-8 lg:flex-row lg:gap-3">
       <div className="mb-2">
         <ul className="flex space-x-1 font-semibold italic lg:w-40 lg:flex-col-reverse">
           <li>{experience.startDate}</li>
@@ -30,7 +31,7 @@ const ExperienceDetail = ({ experience }: Props) => {
           {experience.techStack?.map((tag) => <TagItem key={tag} tag={tag} />)}
         </div>
       </div>
-    </div>
+    </HoverCard>
   );
 };
 export default ExperienceDetail;

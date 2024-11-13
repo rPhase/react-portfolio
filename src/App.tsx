@@ -8,7 +8,7 @@ import ToggleButton from './components/UI/ToggleButton';
 import { ISection } from './types';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
@@ -32,7 +32,9 @@ function App() {
 
   return (
     <div
-      className={`smooth-color min-h-screen cursor-select bg-background text-tBase`}
+      className={
+        'smooth-color min-h-screen cursor-select bg-background font-openSans text-tBase'
+      }
       data-mode={`${isDarkMode ? 'dark' : ''}`}
       data-theme={`red`}
     >

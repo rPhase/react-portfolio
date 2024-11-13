@@ -16,7 +16,7 @@ const Footer = () => {
             href="https://icons8.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary"
+            className="text-link"
           >
             Icons8
           </a>

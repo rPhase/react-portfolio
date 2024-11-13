@@ -1,6 +1,7 @@
 import { IProject } from '@/data/projects-data';
 import { CgGitFork } from 'react-icons/cg';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import HoverCard from './HoverCard';
 import TagItem from './TagItem';
 
 interface Props {
@@ -14,7 +15,7 @@ const ProjectDetail = ({ project }: Props) => {
   const imgSrcPath = `${import.meta.env.BASE_URL}/images/projects/${imgSrc}`;
 
   return (
-    <div className="mb-8 flex flex-col gap-y-4 rounded-2xl p-8 lg:grid lg:grid-cols-[auto_65%] lg:items-start lg:gap-[3rem]">
+    <HoverCard className="mb-8 flex flex-col gap-y-4 p-8 lg:grid lg:grid-cols-[auto_65%] lg:items-start lg:gap-[3rem]">
       <div className="order-2 mx-auto max-w-[40rem] lg:order-none">
         <img src={imgSrcPath} alt={title} className="rounded-lg" />
         {(repo || url) && (
@@ -47,7 +48,7 @@ const ProjectDetail = ({ project }: Props) => {
           {builtWith?.map((tag) => <TagItem key={tag} tag={tag} />)}
         </div>
       </div>
-    </div>
+    </HoverCard>
   );
 };
 export default ProjectDetail;

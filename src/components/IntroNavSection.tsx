@@ -12,6 +12,7 @@ const threshold = 100;
 
 const IntroNavSection = ({ sections }: Props) => {
   const [activeSection, setActiveSection] = useState('about');
+  const [scrollIsTop, setScrollIsTop] = useState(true);
 
   // Check for the scroll position to activate a tab
   // Also check if bottom
@@ -20,6 +21,8 @@ const IntroNavSection = ({ sections }: Props) => {
     const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.scrollY;
     const lastSection = sections.length - 1;
+
+    setScrollIsTop(scrollTop === 0);
 
     // Calculate distance from bottom
     const distanceBottom = documentHeight - (scrollTop + windowHeight);
@@ -49,7 +52,9 @@ const IntroNavSection = ({ sections }: Props) => {
   };
 
   return (
-    <div className="smooth-color-bg fixed flex h-20 w-full bg-background lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32">
+    <div
+      className={`smooth-color-bg fixed flex h-20 w-full border-b-[0.01rem] border-transparent bg-background lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32 lg:border-none ${scrollIsTop ? '' : 'border-b-tBase'}`}
+    >
       <div className="hidden lg:block">
         <Intro />
       </div>
