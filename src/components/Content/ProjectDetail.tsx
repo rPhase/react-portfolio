@@ -10,16 +10,20 @@ interface Props {
 const ProjectDetail = ({ project }: Props) => {
   // destructure project components
   const { title, description, imgSrc, url, repo, builtWith } = project;
-
+  const displayLinks = repo || url;
   // Construct path to public asset with base path in mind
   const imgSrcPath = `${import.meta.env.BASE_URL}/images/projects/${imgSrc}`;
 
   return (
     <HoverCard className="mb-8 flex flex-col gap-y-4 p-8 lg:grid lg:grid-cols-[auto_65%] lg:items-start lg:gap-[3rem]">
       <div className="order-2 mx-auto max-w-[40rem] lg:order-none">
-        <img src={imgSrcPath} alt={title} className="rounded-lg" />
-        {(repo || url) && (
-          <div className="flex justify-center gap-x-20 bg-primary pb-2 text-2xl text-secondary lg:gap-x-10">
+        <img
+          src={imgSrcPath}
+          alt={title}
+          className={`rounded-t-lg ${displayLinks ? '' : 'rounded-b-lg'}`}
+        />
+        {displayLinks && (
+          <div className="flex justify-center gap-x-20 rounded-b-lg bg-primary pb-2 text-2xl text-secondary lg:gap-x-10">
             {repo && (
               <a className="flex items-center gap-x-2" href={repo}>
                 Repo <CgGitFork />

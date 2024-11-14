@@ -4,11 +4,13 @@ import Experience from './components/Content/Experience';
 import Projects from './components/Content/Projects';
 import ContentSection from './components/ContentSection';
 import IntroNavSection from './components/IntroNavSection';
+import ThemeSelector from './components/UI/ThemeSelector';
 import ToggleButton from './components/UI/ToggleButton';
 import { ISection } from './types';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [theme, setTheme] = useState('purple');
 
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
@@ -33,12 +35,17 @@ function App() {
   return (
     <div
       className={
-        'smooth-color min-h-screen cursor-select bg-background font-openSans text-tBase'
+        'smooth-color min-h-screen bg-background font-openSans text-tBase'
       }
       data-mode={`${isDarkMode ? 'dark' : ''}`}
-      data-theme={`red`}
+      data-theme={theme}
     >
       <ToggleButton isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <ThemeSelector
+        currentTheme={theme}
+        setTheme={setTheme}
+        isDarkMode={isDarkMode}
+      />
       <div className="relative flex min-h-screen max-w-[110rem] flex-col lg:mx-auto">
         <IntroNavSection sections={sections} />
         <ContentSection sections={sections} />

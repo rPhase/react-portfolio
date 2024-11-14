@@ -5,7 +5,7 @@ interface Props {
 }
 const NavButton = ({ children, onClick, active }: Props) => {
   return (
-    <div className={`${active ? 'bg-primary text-secondary' : ''}`}>
+    <div className={`${active ? 'bg-primary text-secondary' : ''} rounded-lg`}>
       <button onClick={onClick}>{children}</button>
     </div>
   );

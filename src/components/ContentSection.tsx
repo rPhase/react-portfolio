@@ -1,7 +1,7 @@
 import { ISection } from '@/types';
 import Footer from './Content/Footer';
+import ScrollWrapper from './Content/ScrollWrapper';
 import Intro from './IntroNav/Intro';
-import ScrollWrapper from './IntroNav/ScrollWrapper';
 import Socials from './IntroNav/Socials';
 
 interface Props {
