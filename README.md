@@ -2,8 +2,6 @@
 
 ## Ideas
 
-- Styling
-  - Implement customizable theme preset colors for light/dark mode
 - Hover over effects/tooltips
 - Add component for embedding online videos (youtube)
 - Add widgets like github stats or contributions
@@ -18,6 +16,8 @@
   - Custom Background
   - Custom Cursor
   - Extra Animations
+  - Store and load settings
+  - Better state management
 
 ## Completed
 
@@ -29,3 +29,5 @@
 - General Layout
 - Mobile Display
 - Build and deploy to GitHub Pages using the `gh-pages` branch.
+- Styling
+  - Implement customizable theme preset colors for light/dark mode

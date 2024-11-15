@@ -41,7 +41,7 @@ const ProjectDetail = ({ project }: Props) => {
         <div>
           <h1 className="mb-2 text-3xl capitalize">{title}</h1>
 
-          <ul className="mb-3 list-inside list-disc text-2xl">
+          <ul className="mb-3 ml-8 list-outside list-disc text-2xl">
             {description.map((item) => (
               <li key={item}>{item}</li>
             ))}

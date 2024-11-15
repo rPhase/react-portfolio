@@ -22,7 +22,7 @@ const ExperienceDetail = ({ experience }: Props) => {
         </div>
         <div>
           <p>{experience.description}</p>
-          <ul className="list-inside list-disc pl-3 text-2xl">
+          <ul className="ml-8 list-outside list-disc text-2xl">
             {experience.bulletPoints?.map((item) => <li key={item}>{item}</li>)}
           </ul>
         </div>

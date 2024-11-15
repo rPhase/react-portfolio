@@ -9,11 +9,11 @@ const ToggleButton = ({ isDarkMode, setIsDarkMode }: Props) => {
   return (
     <button
       onClick={() => setIsDarkMode(!isDarkMode)}
-      className="group fixed left-4 top-3 z-50 rounded-full p-2 transition-all duration-300 ease-in-out lg:left-auto lg:right-10"
+      className="fixed left-4 top-5 z-50 rounded-full lg:left-auto lg:right-10"
     >
-      <div className="relative size-6">
+      <div className="size-[24px]">
         <LuSun
-          className={`absolute transform transition-all duration-300 ease-in-out lg:text-black ${isDarkMode ? 'rotate-90 scale-50 opacity-0' : 'rotate-0 scale-100 opacity-100'}`}
+          className={`absolute transform transition-all duration-300 ease-in-out ${isDarkMode ? 'rotate-90 scale-50 opacity-0' : 'rotate-0 scale-100 opacity-100'}`}
           size={24}
         />
         <LuMoon
