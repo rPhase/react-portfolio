@@ -53,7 +53,7 @@ const IntroNavSection = ({ sections }: Props) => {
 
   return (
     <div
-      className={`smooth-color-bg fixed flex h-20 w-full border-b-[0.01rem] border-transparent bg-background lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32 lg:border-none ${scrollIsTop ? '' : 'border-b-tBase'}`}
+      className={`smooth-color-bg fixed flex h-20 w-full border-b-[0.01rem] border-transparent bg-background lg:h-full lg:w-[35rem] lg:flex-col lg:gap-32 lg:border-none lg:bg-transparent ${scrollIsTop ? '' : 'border-b-tBase'}`}
     >
       <div className="hidden lg:block">
         <Intro />

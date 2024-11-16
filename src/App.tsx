@@ -35,7 +35,7 @@ function App() {
   return (
     <div
       className={
-        'smooth-color min-h-screen bg-background font-openSans text-tBase'
+        'smooth-color bg-intro bg-cover bg-fixed bg-bottom bg-no-repeat font-openSans text-tBase'
       }
       data-mode={`${isDarkMode ? 'dark' : ''}`}
       data-theme={theme}
@@ -46,7 +46,7 @@ function App() {
         setTheme={setTheme}
         isDarkMode={isDarkMode}
       />
-      <div className="relative flex min-h-screen max-w-[110rem] flex-col lg:mx-auto">
+      <div className="relative flex min-h-screen max-w-[110rem] flex-col bg-background/60 lg:mx-auto lg:px-20">
         <IntroNavSection sections={sections} />
         <ContentSection sections={sections} />
       </div>

@@ -28,6 +28,9 @@ export default {
         cardBorder: mix('--color-card-border'),
         link: mix('--color-link'),
       },
+      backgroundImage: {
+        intro: "url('/src/assets/bg/intro-bg.jpg')",
+      },
     },
   },
   plugins: [],
